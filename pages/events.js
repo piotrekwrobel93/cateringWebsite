@@ -19,7 +19,6 @@ export default function Events() {
 
 	React.useEffect( () => {
 			t1.from('#animation__image', { opacity: 0, ease: Power3.easeOut})
-			const anim = t2.from( sectionRef.current, { y: 20, opacity: 0, ease: Power3.easeOut, delay: 0.2, duration:1})
 	}, [])
 
 
