@@ -15,7 +15,6 @@ export default function Events() {
 
 
 	const t1 = new TimelineLite({delay: 0.2})
-	const t2 = new TimelineLite({delay: 0})
 
 	React.useEffect( () => {
 			t1.from('#animation__image', { opacity: 0, ease: Power3.easeOut})
