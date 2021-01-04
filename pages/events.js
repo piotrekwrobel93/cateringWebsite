@@ -72,7 +72,7 @@ export default function Events() {
 				<TwoColSection img="/images/events_five.jpg" title="Experimental" position="right">
 					<p>Experiential events; amazing food with all the added extras. If you're looking for something out of the ordinary our team will design a bespoke, multisensory and immersive experience like no other. Let imaginations run wild and the magic begin. </p>
 				</TwoColSection>
-				<TwoColSection img="/images/events_six.jpg" title="Internationl" position="left">
+				<TwoColSection img="/images/events_six.jpg" title="International" position="left">
 					<p>Catering abroad doesn't have to be daunting. Whether you're planning a wedding, birthday party or a large scale corporate event around the world, our team can be on hand to help. </p>
 				</TwoColSection>
 			</div>
