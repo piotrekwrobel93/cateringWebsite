@@ -60,8 +60,8 @@ export default function Food() {
 					<SwiperSlide><img src="/images/slide4.jpg" alt="slide4" /></SwiperSlide>
 					<SwiperSlide><img src="/images/slide1.jpg" alt="slide1" /></SwiperSlide>
 					<SwiperSlide><img src="/images/slide5.jpg" alt="slide5" /></SwiperSlide>
-					<SwiperSlide><img src="/images/slide2.jpg" alt="slide2" /></SwiperSlide>
-					<SwiperSlide><img src="/images/slide3.jpeg" alt="slide3" /></SwiperSlide>
+					<SwiperSlide><img src="/images/slide2.jpg" alt="slide3" /></SwiperSlide>
+					<SwiperSlide><img src="/images/slide3.jpeg" alt="slide2" /></SwiperSlide>
 				</Swiper>
 			</div>
 			<div className={styles.presentation}>
