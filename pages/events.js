@@ -14,22 +14,12 @@ gsap.registerPlugin(ScrollTrigger)
 export default function Events() {
 
 
-
-
-	const sectionRef = React.useRef(null)
 	const t1 = new TimelineLite({delay: 0.2})
 	const t2 = new TimelineLite({delay: 0})
 
 	React.useEffect( () => {
 			t1.from('#animation__image', { opacity: 0, ease: Power3.easeOut})
 			const anim = t2.from( sectionRef.current, { y: 20, opacity: 0, ease: Power3.easeOut, delay: 0.2, duration:1})
-
-			ScrollTrigger.create({
-				trigger: sectionRef.current,
-				animation: anim,
-				start: "top center+=100px",
-				end: "top 100px"
-			})
 	}, [])
 
 
@@ -55,7 +45,7 @@ export default function Events() {
 				<p>We approach every event on a bespoke basis, working to ensure your vision is delivered. One of our dedicated team will guide you through every aspect of your event.</p>
 			</div>
 
-			<div ref={sectionRef}>
+			<div>
 				<TwoColSection img="/images/events_one.jpg"  title="Corporate" position="right" >
 					<p>Corporate events should be fun. We apply our innovative approach to every occasion ensuring any corporate event stands out whether it's a one-off networking reception, dinner with clients, a product launch or a string of conference events and galas.</p>
 				</TwoColSection>
