@@ -56,7 +56,7 @@ export default function Food() {
 			<div className={styles.swiper}>
 				<Swiper
 				navigation = { !showArrows && false }
-				pagination autoplay={{ delay: 1000}} speed={1000} loop="true">
+				pagination autoplay={{ delay: 1000}} speed={500} loop="true">
 					<SwiperSlide><img src="/images/slide2.jpg" alt="slide2" /></SwiperSlide>
 					<SwiperSlide><img src="/images/slide1.jpg" alt="slide1" /></SwiperSlide>
 					<SwiperSlide><img src="/images/slide3.jpeg" alt="slide3" /></SwiperSlide>
