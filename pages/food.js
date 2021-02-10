@@ -1,26 +1,24 @@
 import React from 'react'
 import Head  from 'next/head'
-import Navbar from '../components/HomePage/Navbar/Navbar'
-import styles from '../styles/food.module.css'
-
 import { Swiper, SwiperSlide } from 'swiper/react'
-import Shader from '../components/shared/Shader'
 import SwiperCore, { Navigation, Pagination} from 'swiper'
-
+import { TimelineLite, Power3 } from 'gsap'
+import styles from '../styles/food.module.css'
 import 'swiper/swiper-bundle.css'
-import Footer from '../components/HomePage/Footer'
+// COMPONENTS
+import Navbar from '../components/HomePage/Navbar/Navbar'
+import Shader from '../components/shared/Shader'
 import Links from '../components/shared/Links'
-
-import { gsap, TimelineLite, Power3 } from 'gsap'
+import Footer from '../components/HomePage/Footer'
 
 
 
 export default function Food() {
 
 
-	SwiperCore.use([Navigation, Pagination ])
+	SwiperCore.use([ Navigation, Pagination ])
 
-	const t1 = new TimelineLite({delay: 0.2})
+	const t1 = new TimelineLite({ delay: 0.2 })
 
 	const [showArrows, setShowArrows] = React.useState(true)
 	const linksArray = [
@@ -28,7 +26,7 @@ export default function Food() {
 		{id: 2, name: "Our Team", description: "Event creatives, designing unique experiences", url: '/about'}
 	]
 
-
+	// SIDE EFFECT
 	React.useEffect( () => {
 		t1.from('#animation__wrapper', {opacity: 0, ease: Power3.easeOut, delay: 0 })
 	},[])

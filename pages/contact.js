@@ -1,6 +1,8 @@
 import React from 'react'
+import Head from 'next/head'
 import styles from '../styles/contact.module.css'
 import Navbar from '../components/HomePage/Navbar/Navbar'
+import Footer from '../components/HomePage/Footer'
 
 // Icons
 import ContactIcon from '../public/icons/Contact'
@@ -8,8 +10,6 @@ import MailIcon from '../public/icons/Mail'
 import TwitterIcon from '../public/icons/Twitter'
 import InstagramIcon from '../public/icons/Instagram'
 import DoneIcon from '../public/icons/Done'
-import Footer from '../components/HomePage/Footer'
-import Head from 'next/head'
 
 const Contact = () => {
 
@@ -17,8 +17,6 @@ const Contact = () => {
 	const phoneRef = React.useRef(null)
 
 	const [ showFormConfirmation, setShowFormConfirmation ] = React.useState( false )
-	const [ isForm, setIsForm ] = React.useState(true)
-	const [ details, setDetails ] = React.useState([])
 	const [ name, setName ] = React.useState('')
 	const [ email, setEmail ] = React.useState('')
 	const [ phone, setPhone ] = React.useState('')

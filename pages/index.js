@@ -4,35 +4,31 @@ import Section from '../components/HomePage/Section/Section'
 import DownArrowIcon from '../public/icons/DownArrow'
 import styles from '../styles/index.module.css'
 import Navbar from '../components/HomePage/Navbar/Navbar'
-import ReactFullpage from '@fullpage/react-fullpage';
 import RightArrowIcon from '../public/icons/RightArrow'
 import Footer from '../components/HomePage/Footer'
 import Link from 'next/link'
-
-import { gsap, TimelineLite, Power3 } from 'gsap'
+import FSScroll  from '../helpers/index'
 
 
 
 export default function Home() {
 
+	
+	const containerRef = React.useRef(null)
 
-	const [index,setIndex] = React.useState(0)
-	const [ animateLogo , setAnimateLogo] = React.useState(false)
-
-	const t1 = new TimelineLite({ delay: 0.2 })
-
+	// SIDE EFFECTS
 	React.useEffect( () => {
-		t1.from( '.animation__hero' , {
-			y:15,
-			opacity: 0,
-			ease: Power3.easeOut,
-			delay: 0.2
-		})
-	},[])	
+		window.onbeforeunload = () => window.scrollTo(0,0)
+		const fs = new FSScroll(containerRef.current, document.querySelectorAll(".f-section"))
+		fs.init()
+
+		// CLEAN-UP
+		return () => fs.destroy()
+	},[])
 
 	// JSX
   return (
-    <>
+    <div className="meta-wrapper" ref={containerRef}>
       <Head>
         <title>JHCatering&Co</title>
         <link rel="icon" href="/favicon.ico" />
@@ -40,19 +36,16 @@ export default function Home() {
 	  <Navbar 
 		  position="fixed"
 	  />
-
-	  <ReactFullpage
-		onLeave={(origin, destination, direction) => {
-		}}
-		render={({ state, fullpageApi }) => {
-		return (
 			<div className="animation__hero">
-				<Section title="Food" content="some content" background="/images/img1.jpg">
-				<div className={styles.subtitle}>
-					<p className={styles.subtitle__paragraph}>Creating spectacular occasions with a magical sense of the unexpected, exquisite taste and meticulous craft.</p>
-					<DownArrowIcon width="24" height="24" className={styles.icon}/>
+				<div className="f-section">
+					<Section title="Food" content="some content" background="/images/img1-2.jpg">
+						<div className={styles.subtitle}>
+							<p className={styles.subtitle__paragraph}>Creating spectacular occasions with a magical sense of the unexpected, exquisite taste and meticulous craft.</p>
+							<DownArrowIcon width="24" height="24" className={styles.icon}/>
+						</div>
+					</Section>
 				</div>
-				</Section>
+				<div className="f-section">
 				<Section background="/images/hero2.jpg">
 					<Link href="/food">
 						<div className={styles.subtitle2 + " section__hover"}>
@@ -63,6 +56,8 @@ export default function Home() {
 						</div>
 					</Link>
 				</Section>
+				</div>
+				<div className="f-section">
 				<Section background="/images/hero3.jpg">
 					<Link href="/events">
 						<div className={styles.subtitle3} >
@@ -73,6 +68,8 @@ export default function Home() {
 						</div>
 					</Link>
 				</Section>
+				</div>
+				<div className="f-section">
 				<Section background="/images/hero4.jpg">
 					<Link href="/about">
 						<div className={styles.subtitle4} >
@@ -83,14 +80,14 @@ export default function Home() {
 						</div>
 					</Link>
 				</Section>
-				<div className="section fp-auto-height">
-					<Footer />
+				</div>
+				<div className="f-section">
+					<div className="section fp-auto-height">
+						<Footer />
+					</div>
 				</div>
 			</div>
-		);
-		}}
-	/>
-    </>
+    </div>
 
   )
 }

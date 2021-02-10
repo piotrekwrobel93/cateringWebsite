@@ -6,18 +6,16 @@ import styles from '../styles/events.module.css'
 import TwoColSection from '../components/shared/TwoColSection'
 import Footer from '../components/HomePage/Footer'
 
-import { gsap, TimelineLite, Power3 } from 'gsap/dist/gsap'
-import ScrollTrigger from 'gsap/dist/ScrollTrigger'
+import { TimelineLite, Power3 } from 'gsap/dist/gsap'
 
-gsap.registerPlugin(ScrollTrigger)
 
 export default function Events() {
 
 
-	const t1 = new TimelineLite({delay: 0.2})
+	const t1 = new TimelineLite({ delay: 0.2 })
 
 	React.useEffect( () => {
-			t1.from('#animation__image', { opacity: 0, ease: Power3.easeOut})
+			t1.from('#animation__image', { opacity: 0, ease: Power3.easeOut })
 	}, [])
 
 
@@ -42,7 +40,6 @@ export default function Events() {
 				<h1>Your event - Your style</h1>
 				<p>We approach every event on a bespoke basis, working to ensure your vision is delivered. One of our dedicated team will guide you through every aspect of your event.</p>
 			</div>
-
 			<div>
 				<TwoColSection img="/images/events_one.jpg"  title="Corporate" position="right" >
 					<p>Corporate events should be fun. We apply our innovative approach to every occasion ensuring any corporate event stands out whether it's a one-off networking reception, dinner with clients, a product launch or a string of conference events and galas.</p>

@@ -17,13 +17,14 @@
 .navbar ul li {
 	list-style-type: none;
 	padding: 0 2rem;
+	color: #fff;
 }
 
 .navbar ul li a {
 	text-decoration: none;
-	color: #fff;
 	font-size: 17px;
 	text-transform: uppercase;
+	color: inherit;
 }
 .navbar ul li.active {
 	color: green;
@@ -92,6 +93,7 @@
 
 .mobileMenu > ul > li > a {
 	font-size: 1rem;
+	color: inherit;
 }
 
 .mobileMenu > ul::after{

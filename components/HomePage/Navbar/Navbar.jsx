@@ -3,31 +3,27 @@ import styles from './navbar.module.css'
 import BurgerIcon from '../../../public/icons/Burger'
 import ExitIcon from '../../../public/icons/Exit'
 import Link from 'next/link'
-
-
-
+import { useRouter } from 'next/router'
 
 
 const Navbar = ({position}) => {
 
 
+	const path  = useRouter().pathname
 	const [openMenu, setOpenMenu ] = React.useState(false)
 
-	const handleClick = () => {
-		setOpenMenu( !openMenu )
-	}
+	const handleClick = () => setOpenMenu( !openMenu )
 
 	React.useEffect( () => {
-
-		if( openMenu ) {
+		if (openMenu) {
 			let x = window.scrollX;
 			let y = window.scrollY;
-			window.onscroll = function(){window.scrollTo(x, y);};
+			window.onscroll = function() { window.scrollTo(x, y) };
 		} else {
 			window.onscroll = function(){} 
 		}
-
 	},[openMenu])
+
 
 	return(
 		<>
@@ -39,10 +35,10 @@ const Navbar = ({position}) => {
 					</Link>
 				</div>
 				<ul>
-					<li><Link href="/food">Food</Link></li>
-					<li><Link href="/events">Events</Link></li>
-					<li><Link href="/about">About Us</Link></li>
-					<li><Link href="/contact">Contact</Link></li>
+					<li className={ path === '/food' ? "active-1" : ""}><Link href="/food">Food</Link></li>
+					<li className={ path === '/events' ? "active-1" : ""}><Link href="/events">Events</Link></li>
+					<li className={ path === '/about' ? "active-1" : ""}><Link href="/about">About Us</Link></li>
+					<li className={ path === '/contact' ? "active-1" : ""}><Link href="/contact">Contact</Link></li>
 				</ul>
 				<ExitIcon className={styles.exit} onClick={handleClick}/>
 			</div>
@@ -55,15 +51,15 @@ const Navbar = ({position}) => {
 					<BurgerIcon onClick={handleClick} />
 				</div>
 				<ul>
-					<li><Link href="/food">Food</Link></li>
-					<li><Link href="/events">Events</Link></li>
+					<li className={ path === '/food' ? "active-1" : ""}><Link href="/food">Food</Link></li>
+					<li className={ path === '/events' ? "active-1" : ""}><Link href="/events">Events</Link></li>
 				</ul>
 				<Link href="/">
 					<img src="/images/logo.png" alt="logo" className={styles.logo}/>
 				</Link>
 				<ul>
-					<li><Link href="/about">About us</Link></li>
-					<li><Link href="/contact">Contact</Link></li>
+					<li className={ path === '/about' ? "active-1" : ""}><Link href="/about">About us</Link></li>
+					<li className={ path === '/contact' ? "active-1" : ""}><Link href="/contact">Contact</Link></li>
 				</ul>
 			</div>
 		</>
