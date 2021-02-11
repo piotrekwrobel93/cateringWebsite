@@ -2,7 +2,7 @@ import React from 'react'
 import Head  from 'next/head'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Navigation, Pagination} from 'swiper'
-import { TimelineLite, Power3 } from 'gsap'
+import { gsap, Power3 } from 'gsap'
 import styles from '../styles/food.module.css'
 import 'swiper/swiper-bundle.css'
 // COMPONENTS
@@ -17,8 +17,9 @@ export default function Food() {
 
 
 	SwiperCore.use([ Navigation, Pagination ])
-
-	const t1 = new TimelineLite({ delay: 0.2 })
+	
+	// gsap.registerPlugin( TimelineLite )
+	const t1 = gsap.timeline({ delay: 0.2 })
 
 	const [showArrows, setShowArrows] = React.useState(true)
 	const linksArray = [
