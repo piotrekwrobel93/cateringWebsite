@@ -6,13 +6,13 @@ import styles from '../styles/events.module.css'
 import TwoColSection from '../components/shared/TwoColSection'
 import Footer from '../components/HomePage/Footer'
 
-import { TimelineLite, Power3 } from 'gsap/dist/gsap'
+import { gsap, Power3 } from 'gsap/dist/gsap'
 
 
 export default function Events() {
 
 
-	const t1 = new TimelineLite({ delay: 0.2 })
+	const t1 = gsap.timeline({ delay: 0.2 })
 
 	React.useEffect( () => {
 			t1.from('#animation__image', { opacity: 0, ease: Power3.easeOut })

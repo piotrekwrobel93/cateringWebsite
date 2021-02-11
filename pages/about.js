@@ -6,12 +6,12 @@ import Shader from '../components/shared/Shader'
 import TwoColSection from '../components/shared/TwoColSection'
 import styles from '../styles/about.module.css'
 
-import { TimelineLite, Power3 } from 'gsap'
+import { gsap, Power3 } from 'gsap'
 
 export default function About() {
 
 
-	const t1 = new TimelineLite({ delay: 0.2 })
+	const t1 = gsap.timeline({ delay: 0.2 })
 
 	React.useEffect( () => {
 		t1.from("#animation-image2",{opacity: 0, ease: Power3.easeOut})

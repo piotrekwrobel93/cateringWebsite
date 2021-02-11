@@ -18,7 +18,6 @@ export default function Food() {
 
 	SwiperCore.use([ Navigation, Pagination ])
 	
-	// gsap.registerPlugin( TimelineLite )
 	const t1 = gsap.timeline({ delay: 0.2 })
 
 	const [showArrows, setShowArrows] = React.useState(true)
