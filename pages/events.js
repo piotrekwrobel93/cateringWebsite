@@ -30,7 +30,7 @@ export default function Events() {
 
 			<div className={styles.hero}>
 				<Shader opacity="0.4" />
-				<img src="/images/service_hero.jpg" alt="Hero img" className={styles.hero__image} id="animation__image" />
+				<img src="/images/service_hero.webp" alt="Hero img" className={styles.hero__image} id="animation__image" />
 				<h1>From planning to perfection</h1>
 			</div>
 			<div className={styles.section}>
@@ -41,23 +41,23 @@ export default function Events() {
 				<p>We approach every event on a bespoke basis, working to ensure your vision is delivered. One of our dedicated team will guide you through every aspect of your event.</p>
 			</div>
 			<div>
-				<TwoColSection img="/images/events_one.jpg"  title="Corporate" position="right" >
+				<TwoColSection img="/images/events_one.webp"  title="Corporate" position="right" >
 					<p>Corporate events should be fun. We apply our innovative approach to every occasion ensuring any corporate event stands out whether it's a one-off networking reception, dinner with clients, a product launch or a string of conference events and galas.</p>
 				</TwoColSection>
-				<TwoColSection img="/images/events_two.jpg" title="Weddings" position="left">
+				<TwoColSection img="/images/events_two.webp" title="Weddings" position="left">
 					<p>Your special day catered with love and care. From wedding styling advice and theme curation to invitations, wedding stationery, venue advice and bespoke menu design - we will be with you every step of the way.</p>
 				</TwoColSection>
 				
-				<TwoColSection img="/images/events_three.jpg" title="Private Dining" position="right">
+				<TwoColSection img="/images/events_three.webp" title="Private Dining" position="right">
 					<p>Your special day catered with love and care. From wedding styling advice and theme curation to invitations, wedding stationery, venue advice and bespoke menu design - we will be with you every step of the way.</p>
 				</TwoColSection>
-				<TwoColSection img="/images/events_four.jpg" title="Pop-Ups" position="left">
+				<TwoColSection img="/images/events_four.webp" title="Pop-Ups" position="left">
 					<p>Need a café in the middle of a field? We can help you with that. We have mastered our pop-up expertise through years of working with the likes of the Affordable Art Fair, Decorex and British Art Fair teams.</p>
 				</TwoColSection>
-				<TwoColSection img="/images/events_five.jpg" title="Experimental" position="right">
+				<TwoColSection img="/images/events_five.webp" title="Experimental" position="right">
 					<p>Experiential events; amazing food with all the added extras. If you're looking for something out of the ordinary our team will design a bespoke, multisensory and immersive experience like no other. Let imaginations run wild and the magic begin. </p>
 				</TwoColSection>
-				<TwoColSection img="/images/events_six.jpg" title="International" position="left">
+				<TwoColSection img="/images/events_six.webp" title="International" position="left">
 					<p>Catering abroad doesn't have to be daunting. Whether you're planning a wedding, birthday party or a large scale corporate event around the world, our team can be on hand to help. </p>
 				</TwoColSection>
 			</div>

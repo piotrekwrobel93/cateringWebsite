@@ -38,7 +38,7 @@ export default function Home() {
 	  />
 			<div className="animation__hero">
 				<div className="f-section">
-					<Section title="Food" content="some content" background="/images/img1-2.jpg">
+					<Section title="Food" content="some content" background="/images/img1-2.webp">
 						<div className={styles.subtitle}>
 							<p className={styles.subtitle__paragraph}>Creating spectacular occasions with a magical sense of the unexpected, exquisite taste and meticulous craft.</p>
 							<DownArrowIcon width="24" height="24" className={styles.icon}/>
@@ -46,7 +46,7 @@ export default function Home() {
 					</Section>
 				</div>
 				<div className="f-section">
-				<Section background="/images/hero2.jpg">
+				<Section background="/images/hero2.webp">
 					<Link href="/food">
 						<div className={styles.subtitle2 + " section__hover"}>
 							<h2>Food</h2>
@@ -58,7 +58,7 @@ export default function Home() {
 				</Section>
 				</div>
 				<div className="f-section">
-				<Section background="/images/hero3.jpg">
+				<Section background="/images/hero3.webp">
 					<Link href="/events">
 						<div className={styles.subtitle3} >
 							<h2>Events</h2>
@@ -70,7 +70,7 @@ export default function Home() {
 				</Section>
 				</div>
 				<div className="f-section">
-				<Section background="/images/hero4.jpg">
+				<Section background="/images/hero4.webp">
 					<Link href="/about">
 						<div className={styles.subtitle4} >
 							<h2>Services</h2>
