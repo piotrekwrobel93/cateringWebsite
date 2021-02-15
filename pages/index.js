@@ -8,6 +8,7 @@ import RightArrowIcon from '../public/icons/RightArrow'
 import Footer from '../components/HomePage/Footer'
 import Link from 'next/link'
 import FSScroll  from '../helpers/index'
+import { isMobile } from '../helpers/index'
 
 
 
@@ -19,11 +20,13 @@ export default function Home() {
 	// SIDE EFFECTS
 	React.useEffect( () => {
 		window.onbeforeunload = () => window.scrollTo(0,0)
-		const fs = new FSScroll(containerRef.current, document.querySelectorAll(".f-section"))
-		fs.init()
-
+		if ( !/iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent) ) {
+			const fs = new FSScroll(containerRef.current, document.querySelectorAll(".f-section"))
+			fs.init()
+			return () => fs.destroy()
+		} 
+		
 		// CLEAN-UP
-		return () => fs.destroy()
 	},[])
 
 	// JSX
