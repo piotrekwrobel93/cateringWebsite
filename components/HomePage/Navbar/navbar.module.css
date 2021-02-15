@@ -1,5 +1,5 @@
 .navbar{
-	width: 100%;
+	width: 100vw;
 	height: auto;
 	top: 10%;
 	left: 0;
@@ -55,25 +55,22 @@
 	right: 5%;
 	fill: #fff;
 	display: none;
-
 }
 
 
 .mobileMenu{
-	/* display: none; */
 	color: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: fixed;
-	top: 0;
-	right: 0;
+	/* top: 0; */
+	/* right: 0; */
 	width: 100vw;
 	height: 100vh;
-	background-color: #111;
+	background-color: green;
 	z-index: 100000;
 	font-size: 1.7rem;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
 	/* overflow: hidden; */
 }

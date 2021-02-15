@@ -20,13 +20,12 @@ export default function Home() {
 	// SIDE EFFECTS
 	React.useEffect( () => {
 		window.onbeforeunload = () => window.scrollTo(0,0)
-		if ( !/iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent) ) {
-			const fs = new FSScroll(containerRef.current, document.querySelectorAll(".f-section"))
-			fs.init()
-			return () => fs.destroy()
-		} 
-		
+		if ( window.innerWidth < 800 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return
+		const fs = new FSScroll(containerRef.current, document.querySelectorAll(".f-section"))
+		fs.init()
+
 		// CLEAN-UP
+		return () => fs.destroy()
 	},[])
 
 	// JSX
