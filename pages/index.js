@@ -14,7 +14,7 @@ import UpArrow from '../public/icons/UpArrow'
 
 export default function Home() {
 
-	
+	const [isMobile, setIsMobile] = React.useState(false)
 	const containerRef = React.useRef(null)
 	const upArrowRef = React.useRef(null)
 	const downArrowRef = React.useRef(null)
@@ -22,7 +22,7 @@ export default function Home() {
 	React.useEffect( () => {
 		window.onbeforeunload = () => window.scrollTo(0,0)
 		// IF MOBILE DONT ADD FULLSCREEN EFFECT
-		// if ( window.innerWidth < 800 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return
+		if ( window.innerWidth < 800 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) { setIsMobile(true); return}
 		const fs = new FSScroll(containerRef.current, document.querySelectorAll(".f-section"), downArrowRef.current, upArrowRef.current)
 		fs.init()
 		
@@ -43,13 +43,17 @@ export default function Home() {
 		  position="fixed"
 	  />
 			<div className="animation__hero">
-				<div ref={upArrowRef} className={styles.arrowUP}>
-					<UpArrow width={24} height={24} fill="#999" />
-				</div>
-				<div ref={downArrowRef} className={styles.arrowDOWN}>
-					<DownArrow width={24} height={24} fill="#999" />
-				</div>
-				{/* <div> */}
+				{
+					!isMobile &&
+				<>
+					<div ref={upArrowRef} className={styles.arrowUP}>
+						<UpArrow width={24} height={24} fill="#999" />
+					</div>
+					<div ref={downArrowRef} className={styles.arrowDOWN}>
+						<DownArrow width={24} height={24} fill="#999" />
+					</div>
+				</>
+				}
 				<div className="f-section">
 					<Section title="Food" content="some content" background="/images/img1-2.webp">
 						<div className={styles.subtitle}>
