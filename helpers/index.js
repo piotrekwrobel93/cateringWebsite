@@ -3,7 +3,7 @@
     let last_time = 0
     
 
-    export default function FSScroll(container, slides, callback) {
+    export default function FSScroll(container, slides, downButton, upButton) {
         // INIT
         this.container = container
         // METHODS
@@ -68,5 +68,21 @@
                 window.addEventListener("wheel", this._event, { passive: false })
             }
         }
+
+        if (downButton) {
+            downButton.addEventListener("click", (event) => {
+                event.preventDefault()
+                this.next()
+            })
+        }
+        if (upButton) {
+            upButton.addEventListener("click", (event) => {
+                event.preventDefault()
+                this.prev()
+            })
+        }
     }
+
+
+
 

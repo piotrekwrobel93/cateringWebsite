@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import React from 'react'
 import Section from '../components/HomePage/Section/Section'
-import DownArrowIcon from '../public/icons/DownArrow'
 import styles from '../styles/index.module.css'
 import Navbar from '../components/HomePage/Navbar/Navbar'
 import RightArrowIcon from '../public/icons/RightArrow'
 import Footer from '../components/HomePage/Footer'
 import Link from 'next/link'
 import FSScroll  from '../helpers/index'
-import { isMobile } from '../helpers/index'
+import DownArrow from '../public/icons/DownArrow'
+import UpArrow from '../public/icons/UpArrow'
 
 
 
@@ -16,18 +16,21 @@ export default function Home() {
 
 	
 	const containerRef = React.useRef(null)
-
+	const upArrowRef = React.useRef(null)
+	const downArrowRef = React.useRef(null)
 	// SIDE EFFECTS
 	React.useEffect( () => {
 		window.onbeforeunload = () => window.scrollTo(0,0)
 		// IF MOBILE DONT ADD FULLSCREEN EFFECT
-		if ( window.innerWidth < 800 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return
-		const fs = new FSScroll(containerRef.current, document.querySelectorAll(".f-section"))
+		// if ( window.innerWidth < 800 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return
+		const fs = new FSScroll(containerRef.current, document.querySelectorAll(".f-section"), downArrowRef.current, upArrowRef.current)
 		fs.init()
-
+		
 		// CLEAN-UP
 		return () => fs.destroy()
 	},[])
+
+
 
 	// JSX
   return (
@@ -40,11 +43,17 @@ export default function Home() {
 		  position="fixed"
 	  />
 			<div className="animation__hero">
+				<div ref={upArrowRef} className={styles.arrowUP}>
+					<UpArrow width={24} height={24} fill="#999" />
+				</div>
+				<div ref={downArrowRef} className={styles.arrowDOWN}>
+					<DownArrow width={24} height={24} fill="#999" />
+				</div>
+				{/* <div> */}
 				<div className="f-section">
 					<Section title="Food" content="some content" background="/images/img1-2.webp">
 						<div className={styles.subtitle}>
 							<p className={styles.subtitle__paragraph}>Creating spectacular occasions with a magical sense of the unexpected, exquisite taste and meticulous craft.</p>
-							<DownArrowIcon width="24" height="24" className={styles.icon}/>
 						</div>
 					</Section>
 				</div>
