@@ -31,7 +31,7 @@ const Navbar = ({position}) => {
 			<div className={styles.mobileMenu} >
 				<div>
 					<Link href="/">
-						<img src="/images/logo.webp" alt="logo" width="150px" height="100px" style={{marginBottom: "2rem"}}/>
+						<img src="/images/logo.png" alt="logo" width="150px" height="100px" style={{marginBottom: "2rem"}}/>
 					</Link>
 				</div>
 				<ul>
@@ -55,7 +55,7 @@ const Navbar = ({position}) => {
 					<li className={ path === '/events' ? "active-1" : ""}><Link href="/events">Events</Link></li>
 				</ul>
 				<Link href="/">
-					<img src="/images/logo.webp" alt="logo" className={styles.logo}/>
+					<img src="/images/logo.png" alt="logo" className={styles.logo}/>
 				</Link>
 				<ul>
 					<li className={ path === '/about' ? "active-1" : ""}><Link href="/about">About us</Link></li>

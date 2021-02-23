@@ -55,14 +55,14 @@ export default function Home() {
 				</>
 				}
 				<div className="f-section">
-					<Section title="Food" content="some content" background="/images/img1-2.webp">
+					<Section title="Food" content="some content" background="/images/img1-2.jpg">
 						<div className={styles.subtitle}>
 							<p className={styles.subtitle__paragraph}>Creating spectacular occasions with a magical sense of the unexpected, exquisite taste and meticulous craft.</p>
 						</div>
 					</Section>
 				</div>
 				<div className="f-section">
-				<Section background="/images/hero2.webp">
+				<Section background="/images/hero2.jpg">
 					<Link href="/food">
 						<div className={styles.subtitle2 + " section__hover"}>
 							<h2>Food</h2>
@@ -74,7 +74,7 @@ export default function Home() {
 				</Section>
 				</div>
 				<div className="f-section">
-				<Section background="/images/hero3.webp">
+				<Section background="/images/hero3.jpg">
 					<Link href="/events">
 						<div className={styles.subtitle3} >
 							<h2>Events</h2>
@@ -86,7 +86,7 @@ export default function Home() {
 				</Section>
 				</div>
 				<div className="f-section">
-				<Section background="/images/hero4.webp">
+				<Section background="/images/hero4.jpg">
 					<Link href="/about">
 						<div className={styles.subtitle4} >
 							<h2>Services</h2>
