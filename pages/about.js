@@ -32,8 +32,8 @@ export default function About() {
 				</div>
 				<div className={styles.sections} >
 					<div className={styles.section1}>
-						<h1>The Clerkenwell Green Team</h1>
-						<p>We are Clerkenwell Green - a bespoke events catering team based out of Hoxton, East London. We work across some of the country’s finest venues delivering beautifully cool extraordinary events. Food is our passion; ours is carefully designed to showcase the best seasonal ingredients available to us throughout the year.</p>
+						<h1>The JH<span style={{color: "green"}}>&amp;</span>Co Team</h1>
+						<p>We are JH&amp;Co - a bespoke events catering team based out in Edinburgh. We work across some of the country’s finest venues delivering beautifully cool extraordinary events. Food is our passion; ours is carefully designed to showcase the best seasonal ingredients available to us throughout the year.</p>
 						<img src="/images/about_one.jpg" alt="staff" />
 					</div>
 					<div className={styles.section2}>
@@ -60,7 +60,7 @@ export default function About() {
 				</TwoColSection>
 				<div className={styles.work}>
 					<h1>Interested in joining our team</h1>
-					<p>We are always on the lookout for like-minded, passionate people to join the Clerkenwell Green team. If you feel you would like to be a part of it, get in touch. We look forward to hearing from you.</p>
+					<p>We are always on the lookout for like-minded, passionate people to join the JH&Co team. If you feel you would like to be a part of it, get in touch. We look forward to hearing from you.</p>
 				</div>
 				<Footer />
 			</div>

@@ -90,8 +90,8 @@ export default function Home() {
 					<Link href="/about">
 						<div className={styles.subtitle4} >
 							<h2>Services</h2>
-							<h1>Beautifully curated menus for any event</h1>
-							<p>Our food, created with passion, designed to inspire, evoke conversation and  challenge perception</p>
+							<h1>Creating the perfect experience for you</h1>
+							<p>Helping you bring your ideas and vision to life with uniquely creative eye and attention to detail</p>
 							<RightArrowIcon />
 						</div>
 					</Link>
