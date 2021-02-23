@@ -156,7 +156,7 @@ const Contact = () => {
 			</div>
 			<div className={styles.work}>
 				<h1>Interested in joining our team</h1>
-				<p>We are always on the lookout for like-minded, passionate people to join the Clerkenwell Green team. If you feel you would like to be a part of it, get in touch. We look forward to hearing from you.</p>
+				<p>We are always on the lookout for like-minded, passionate people to join the JH&amp;Co team. If you feel you would like to be a part of it, get in touch. We look forward to hearing from you.</p>
 			</div>
 
 			<Footer/>
