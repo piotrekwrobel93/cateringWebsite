@@ -1,5 +1,6 @@
 ### Catering Website
-This project was created with the goal to present images of food in a clean, responsive, and modern design.### Tools Used
+This project was created with the goal to present images of food in a clean, responsive, and modern design.
+### Tools Used
 
 - NextJS
 - Modules CSS
