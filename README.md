@@ -6,5 +6,4 @@ This project was created with the goal to present images of food in a clean, res
 - SwiperJS
 - My own Fullpage.js
 
-##### This was great project to make and gave me a great experience boost 
-##### with NextJS framework :tw-1f493:
+##### This was great project to make and gave me a great experience boost with NextJS framework
